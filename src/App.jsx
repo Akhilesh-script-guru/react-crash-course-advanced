@@ -102,8 +102,36 @@
 
 // ***************//  project 3 //*********************** */
 
-import React from "react";
+// import React from "react";
+// import PackingList from "./components/PackingList";
+// import Status from "./components/Status";
+// import Form from "./components/Form";
+// import Header from "./components/Header";
 
-export const App = () => {
-  return <div>App</div>;
+// const App = () => {
+//   return (
+//     <div>
+//       <Header />
+//       <Form />
+//       <PackingList />
+//       <Status />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ******************project 4 flashcard************//////////
+
+import React from "react";
+import FAQList from "./components/flashCard/flashCard";
+
+const App = () => {
+  return (
+    <div>
+      <FAQList />
+    </div>
+  );
 };
+
+export default App;
