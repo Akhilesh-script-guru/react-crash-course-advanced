@@ -52,11 +52,10 @@
 //****************** */ project2 ?************************
 
 // import { useState } from "react";
-// import { useState } from "react";
 
 // function App() {
-//   const [count, setCount] = useState(0); // Offset days
-//   const [step, setStep] = useState(1); // Step for increment/decrement
+//   const [count, setCount] = useState(0);
+//   const [step, setStep] = useState(1);
 
 //   // Calculate target date
 //   const date = new Date();
@@ -100,21 +99,42 @@
 
 // export default App;
 
-// ***************//  project 3 //*********************** */
+// ***************//  project 3 book system //*********************** */
 
-// import React from "react";
+// import React, { useState } from "react";
 // import PackingList from "./components/PackingList";
 // import Status from "./components/Status";
 // import Form from "./components/Form";
 // import Header from "./components/Header";
 
 // const App = () => {
+//   const [items, setItems] = useState([]);
+//   const totalVal = items.length;
+//   const handleDelete = (text) => {
+//     const newItems = items.filter((items) => items.text !== text);
+//     console.log(newItems);
+
+//     setItems(newItems);
+//   };
+
+//   const handleIsCompelted = (text) => {
+//     setItems((items) =>
+//       items.map((item) =>
+//         item.text === text ? { ...item, isComplete: !item.isComplete } : item
+//       )
+//     );
+//   };
+//   console.log(items);
 //   return (
 //     <div>
 //       <Header />
-//       <Form />
-//       <PackingList />
-//       <Status />
+//       <Form setItems={setItems} />
+//       <PackingList
+//         items={items}
+//         deleteItems={handleDelete}
+//         handleIsCompelted={handleIsCompelted}
+//       />
+//       <Status totalVal={totalVal} />
 //     </div>
 //   );
 // };
@@ -123,13 +143,101 @@
 
 // ******************project 4 flashcard************//////////
 
+// import React from "react";
+// import FAQList from "./components/flashCard/flashCard";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FAQList />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// **********************challlange -2 timer************//
+
+// import { useState } from "react";
+
+// function App() {
+//   const [count, setCount] = useState(0);
+//   const [step, setStep] = useState(1);
+
+//   // Calculate target date
+//   const date = new Date();
+//   date.setDate(date.getDate() + count);
+
+//   // Count Controls
+//   const plusCount = () => setCount((prev) => prev + step);
+//   const minusCount = () => setCount((prev) => prev - step);
+//   const resetbtn = () => {
+//     setCount(0);
+//     setStep(1);
+//   };
+
+//   return (
+//     <>
+//       <input
+//         type="range"
+//         name="range"
+//         min="0"
+//         max="15"
+//         value={step}
+//         onChange={(e) => setStep(Number(e.target.value))}
+//       />
+//       <h1>{step}</h1>
+//       <button onClick={minusCount}>-</button>
+//       <input
+//         type="number"
+//         value={count}
+//         onChange={(e) => setCount(Number(e.target.value))}
+//       />
+//       <button onClick={plusCount}>+</button>
+
+//       <h1>
+//         {count === 0
+//           ? "Today is"
+//           : count > 0
+//           ? `${count} day${count > 1 ? "s" : ""} from today is`
+//           : `${Math.abs(count)} day${
+//               Math.abs(count) > 1 ? "s" : ""
+//             } ago was`}{" "}
+//         {date.toDateString()}
+//       </h1>
+//       {count !== 0 || step !== 1 ? (
+//         <button onClick={resetbtn}>reset</button>
+//       ) : null}
+//     </>
+//   );
+// }
+
+// export default App;
+
+// ********** project 5 - acordians***************
+
+// import StaticAccordion from "./components/accordian/static";
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>Static Accordion Example</h1>
+//       <StaticAccordion />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//  project 6 ***********
+
 import React from "react";
-import FAQList from "./components/flashCard/flashCard";
+import FriendsList from "./components/eat-split/Friend-list";
 
 const App = () => {
   return (
     <div>
-      <FAQList />
+      <FriendsList />
     </div>
   );
 };
