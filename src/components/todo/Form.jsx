@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ setItems }) {
   const [form, setForm] = useState({
     number: "",
     text: "",
+    isComplete: false,
   });
 
   const handleOnChange = (e) => {
@@ -18,9 +19,12 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+
+    setItems((prev) => [...prev, form]);
     setForm({
-      number: "",
       text: "",
+      number: "",
+      isComplete: false,
     });
   };
 
