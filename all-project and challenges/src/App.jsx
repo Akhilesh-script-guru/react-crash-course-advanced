@@ -231,15 +231,29 @@
 
 //  project 6 ***********
 
+// import React from "react";
+// import FriendsList from "./components/eat-split/Friend-list";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <FriendsList />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// **************** bank acount project with reducers  // *******
+
 import React from "react";
-import FriendsList from "./components/eat-split/Friend-list";
+import BankAc from "./challenge/Bank-pr";
 
 const App = () => {
   return (
     <div>
-      <FriendsList />
+      <BankAc />
     </div>
   );
 };
-
 export default App;
