@@ -1,0 +1,54 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# VS Code directory
+.vscode/
+
+# WebStorm directory
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files created by IDEs
+*.swp
+*.swo
+
+# Next.js build output (if using Next.js)
+.next/
+
+# .env files
+.env*
+
+# Expo build (if using Expo for React Native)
+.expo/
+
+# Jest coverage
+coverage/
+
+# TypeScript compiled files
+*.tsbuildinfo
